@@ -25,6 +25,14 @@ public class ExperimentalPlane extends Plane{
     }
 
     @Override
+    public String toString() {
+        return super.toString().replace("}",
+                ", experimentalType=" + experimentalType +
+                        ", classificationLevel=" + classificationLevel +
+                        '}');
+    }
+
+    @Override
     public boolean equals(Object plane) {
         if (this == plane) return true;
         if (!(plane instanceof ExperimentalPlane)) return false;
@@ -35,16 +43,7 @@ public class ExperimentalPlane extends Plane{
     }
 
     @Override
-    public String toString() {
-        return super.toString().replace("}",
-                ", experimentalType=" + experimentalType +
-                        ", classificationLevel=" + classificationLevel +
-                        '}');
-    }
-
-    @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), classificationLevel, experimentalType);
     }
-
 }
