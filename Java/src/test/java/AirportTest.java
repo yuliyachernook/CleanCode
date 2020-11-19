@@ -86,7 +86,7 @@ public class AirportTest {
     }
     @Test
     public void AirportHasAtLeastOneTransportMilitaryPlanesTest() {
-        Assert.assertTrue(new Airport(planes).getTransportMilitaryPlanesList().stream().anyMatch(militaryPlane ->
+        Assert.assertTrue(airport.getTransportMilitaryPlanesList().stream().anyMatch(militaryPlane ->
                 militaryPlane.getMilitaryType()==MilitaryPlaneType.TRANSPORT));
     }
 }
