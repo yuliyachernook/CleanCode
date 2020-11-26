@@ -59,7 +59,7 @@ public class AirportTest {
 
     @Test
     public void GetPassengerPlaneWithMaxCapacityTest() {
-        Assert.assertTrue(airport.getPassengerPlaneWithMaxPassengersCapacity().equals(planeWithMaxPassengerCapacity));
+        Assert.assertEquals(planeWithMaxPassengerCapacity, airport.getPassengerPlaneWithMaxPassengersCapacity());
     }
 
     @Test
